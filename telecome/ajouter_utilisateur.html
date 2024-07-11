@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Utilisateur</title>
+    <link rel="stylesheet" href="ajouter_utilisateur.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Ajouter un Utilisateur</h2>
+        <form id="addUserForm" action="ajouter_utilisateur.php" method="POST">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="type">Type:</label>
+            <select id="type" name="type" required>
+                <option value="consultant">Consultant</option>
+                <option value="b2b">B2B</option>
+                <option value="ETT">ETT</option>
+            </select>
+
+            <label for="password">Mot de Passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+    <script src="ajouter_utilisateur.js"></script>
+</body>
+</html>

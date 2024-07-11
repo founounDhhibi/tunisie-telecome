@@ -1,0 +1,138 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('6057485.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.6); /* Optional: To ensure readability against varied backgrounds */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header .logo {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 72, 186, 0.9); /* Blue color from the logo */
+    padding-top: 30px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #005bcf;
+}
+
+nav ul li a:hover {
+    background-color: #005bcf; /* Slightly lighter blue for hover */
+    transform: scale(1.05);
+}
+
+main {
+    margin-left: 240px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.newStyle1 {
+}
+
+
+nav {
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 72, 186, 0.9); /* Blue color from the logo */
+    padding-top: 30px;
+    padding-bottom: 30px; /* Padding at the bottom to ensure space for the button */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between menu items and the button */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #005bcf;
+}
+
+nav ul li a:hover {
+    background-color: #005bcf; /* Slightly lighter blue for hover */
+    transform: scale(1.05);
+}

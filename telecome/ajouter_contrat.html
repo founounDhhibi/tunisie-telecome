@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Contrat</title>
+    <link rel="stylesheet" href="ajouter_contrat.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ajouter un Contrat</h1>
+        
+        <form id="contract-form" action="ajouter_contrat.php" method="post" onsubmit="return submitForm(event)">
+            <label for="date_contrat">Date du Contrat:</label>
+            <input type="date" id="date_contrat" name="date_contrat" required>
+            
+            <label for="nombre_contrat">Nombre:</label>
+            <input type="number" id="nombre_contrat" name="nombre_contrat" required>
+            
+            <label for="montant">Montant:</label>
+            <input type="number" step="0.01" id="montant" name="montant" required>
+            
+            <label for="type_contrat">Type de Contrat:</label>
+            <select id="type_contrat" name="type_contrat" required>
+                <option value="offre select">Offre Select</option>
+                <option value="offre optimum">Offre Optimum</option>
+                <option value="offre omega 4fo">Offre Omega 4FO</option>
+                <option value="waffi adsl">Waffi ADSL</option>
+                <option value="waffi vdsl">Waffi VDSL</option>
+                <option value="jpon">JPON</option>
+                <option value="manette corporette">Manette Corporette</option>
+                <option value="9optica">9optica</option>
+                <option value="10 netbox">10 Netbox</option>
+            </select>
+            
+            <input type="submit" value="Ajouter">
+            <input type="reset" value="Réinitialiser">
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="ajouter_contrat.js"></script>
+</body>
+</html>

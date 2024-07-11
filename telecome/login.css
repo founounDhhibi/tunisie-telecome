@@ -1,0 +1,120 @@
+﻿/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #003366, #0099ff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    display: flex;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInScale 0.8s ease-out forwards;
+}
+
+/* Fade In and Scale Animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Left Section */
+.left-section {
+    background: #0056a0;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right Section */
+.right-section {
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+}
+
+/* Form */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Label */
+#login-form label {
+    font-size: 16px;
+    color: #003366;
+}
+
+/* Form Input */
+#login-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#login-form input:focus {
+    border-color: #0056a0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Submit and Reset Button */
+#login-form input[type="submit"],
+#login-form input[type="reset"] {
+    background: #0056a0;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#login-form input[type="submit"]:hover,
+#login-form input[type="reset"]:hover {
+    background: #003366;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+#error-message {
+    color: red;
+    display: none;
+    margin-top: 10px;
+}

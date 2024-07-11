@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png"> <!-- Using the logo as favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png"> <!-- Using the logo as apple-touch-icon -->
+    <meta name="theme-color" content="#ffffff"> <!-- Background color for the browser -->
+
+</head>
+<body>
+    <header>
+        <h1><span lang="fr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span>Espace Consultant</h1>
+        <img src="logo.png" alt="Tunisie Telecom Logo" class=" logo">   </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('afficher_contrat.html')">Afficher Contrat</a></li>
+            <li><a href="#" onclick="showContent('visualiser_porcentage.html')">Visualiser Pourcentage</a></li>
+            <li><a href="login.html">Log Out</a></li> <!-- Added Log Out menu item -->
+        </ul>
+    </nav>
+     <main>
+        <iframe id="content-frame" src="afficher_contrat.html"></iframe>
+    </main>
+
+
+    <script src="admin.js"></script>
+</body>
+</html>

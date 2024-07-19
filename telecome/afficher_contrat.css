@@ -40,18 +40,19 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    color: black; /* Couleur du texte dans les cellules */
 }
 
 th, td {
     border: 1px solid #ddd; /* Bordure des cellules */
-    padding: 8px;
-    text-align: left;
+    padding: 10px;
+    text-align: center;
 }
 
 th {
     background-color: #0056a0; /* Couleur de fond de l'en-tête */
     color: white; /* Couleur de texte de l'en-tête */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 tbody tr:nth-child(even) {
@@ -59,5 +60,25 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #e0e0e0; /* Couleur de fond au survol */
+    background-color: #f0f0f0; /* Couleur de fond au survol */
+}
+input[type="date"], input[type="submit"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"].afficher-button {
+    background-color: #0056a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"].afficher-button:hover {
+    background-color: #003366;
 }

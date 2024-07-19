@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul des Taux des Contrats</title>
+    <link rel="stylesheet" href="pourcentage.css"> <!-- Assurez-vous d'adapter le chemin vers votre fichier CSS -->
+</head>
+<body>
+    <div class="container">
+        <h2>Calcul des Taux des Contrats</h2>
+        <form action="pourcentage.php" method="post" id="tauxForm">
+            <label for="month">Sélectionner le mois :</label>
+            <input type="month" id="month" name="month" required>
+            <button type="submit">Calculer Taux</button>
+        </form>
+        <div id="resultContainer">
+            <!-- Les résultats seront affichés ici par JavaScript -->
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Assurez-vous d'adapter le chemin vers votre fichier JavaScript -->
+</body>
+</html>

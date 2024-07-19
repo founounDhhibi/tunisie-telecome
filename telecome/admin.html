@@ -6,9 +6,9 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png"> <!-- Using the logo as favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png"> <!-- Using the logo as apple-touch-icon -->
-    <meta name="theme-color" content="#ffffff"> <!-- Background color for the browser -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png"> 
+    <meta name="theme-color" content="#ffffff"> 
 
 </head>
 <body>
@@ -18,16 +18,20 @@
         <img src="logo.png" alt="Tunisie Telecom Logo" class=" logo">   </header>
     <nav>
         <ul>
+            
             <li><a href="#" onclick="showContent('ajouter_contrat.html')">Ajouter Contrat</a></li>
             <li><a href="#" onclick="showContent('afficher_contrat.html')">Afficher Contrat</a></li>
-            <li><a href="#" onclick="showContent('visualiser_porcentage.html')">Visualiser Pourcentage</a></li>
+            <li><a href="#" onclick="showContent('valider_contrats.php')">Valider Contrats</a></li> 
+            <li><a href="#" onclick="showContent('pourcentage.html')">Visualiser Pourcentage</a></li>
             <li><a href="#" onclick="showContent('ajouter_utilisateur.html')">Ajouter Utilisateur</a></li>
+            <li><a href="#" onclick="showContent('modifier_utilisateur.php')">modifier Utilisateur</a></li>
             <li><a href="#" onclick="showContent('supprimer_utilisateur.php')">Supprimer Utilisateur</a></li>
-            <li><a href="login.html">Log Out</a></li> <!-- Added Log Out menu item -->
+             
+            <li><a href="login.html">Log Out</a></li> 
         </ul>
     </nav>
      <main>
-        <iframe id="content-frame" src="afficher_contrat.html"></iframe>
+        <iframe id="content-frame" src="pourcentage.html"></iframe>
     </main>
 
 

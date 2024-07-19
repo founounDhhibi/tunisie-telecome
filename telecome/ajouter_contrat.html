@@ -16,6 +16,7 @@
             
             <label for="nombre_contrat">Nombre:</label>
             <input type="number" id="nombre_contrat" name="nombre_contrat" required>
+            <input type="hidden" name="user_type" value="<?php echo $_SESSION['user_type']; ?>">
             
             <label for="montant">Montant:</label>
             <input type="number" step="0.01" id="montant" name="montant" required>

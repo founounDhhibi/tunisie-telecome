@@ -1,37 +1,32 @@
-﻿document.addEventListener('DOMContentLoaded', function() {
-    showContent('afficher_contrat.html');
+// modifier_utilisateur.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    const editButtons = document.querySelectorAll('.editButton');
+    
+    editButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = button.getAttribute('data-id'); // Modification ici
+            fetchUserDetails(userId);
+        });
+    });
 });
 
-function showContent(page) {
-    document.getElementById('content-frame').src = page;
-}
-// hethi teb3a modifier utilisateur
-
-// admin.js
-
-function searchUser() {
-    const password = document.getElementById('password').value;
-
-    // Fetch user data based on password
-    fetch(`search_user.php?password=${password}`)
+function fetchUserDetails(userId) {
+    fetch(`fetch_user_details.php?id=${userId}`) // Modification ici
         .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                alert(data.error); // Handle errors
-            } else {
-                displayUserDetails(data); // Display user details
-            }
+        .then(user => {
+            displayUserDetails(user);
         })
-        .catch(error => console.error('Erreur lors de la recherche d\'utilisateur :', error));
+        .catch(error => console.error('Erreur lors de la récupération des détails de l\'utilisateur :', error));
 }
 
 function displayUserDetails(user) {
-    const userDetails = document.getElementById('user-details');
-    userDetails.innerHTML = ''; // Clear previous content
+    const userDetailsContainer = document.getElementById('userDetails');
+    userDetailsContainer.innerHTML = ''; // Clear previous content
 
     const form = document.createElement('form');
     form.id = 'modifyUserForm';
-    form.action = 'modifier_utilisateur.php'; // PHP script to handle modification
+    form.action = 'update_user.php'; // Script PHP pour mettre à jour l'utilisateur
     form.method = 'POST';
 
     const idInput = document.createElement('input');
@@ -89,5 +84,6 @@ function displayUserDetails(user) {
     submitButton.textContent = 'Modifier Utilisateur';
     form.appendChild(submitButton);
 
-    userDetails.appendChild(form);
+    userDetailsContainer.appendChild(form);
+    userDetailsContainer.classList.remove('hidden');
 }
